@@ -1,26 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive comments section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Pull dynamic content from the data.json file -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./comment-page-style.css" />
+        <title>Frontend Mentor | Interactive comments section</title>
+        <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    </head>
+    <body>
+        <!-- Pull dynamic content from the data.json file -->
+        <article class="container">
+            <div class="comment__container">
+                <ul>
+                    <li class="single__comment">
+                        <div class="single__comment__origin">
+                            <div class="single__comment__recommend">
+                                <div
+                                    class="single__comment__recommend__container"
+                                >
+                                    <button class="recommend__up"></button>
+                                    <span class="recommend__count">12</span>
+                                    <button class="recommend__down"></button>
+                                </div>
+                            </div>
+                            <div class="single__comment__container">
+                                <div class="single__comment__header">
+                                    <div class="single__comment__user__info">
+                                        <img
+                                            src="./images/avatars/image-amyrobson.webp"
+                                            alt="user amyrobson's photo"
+                                            class="comment__user__photo"
+                                        />
+                                        <span class="comment__user__name"
+                                            >amyrobson</span
+                                        >
+                                        <span class="comment__date"
+                                            >1 month ago</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="single__comment__icon"
+                                        name="reply"
+                                    >
+                                        <img
+                                            src="./images/icon-reply.svg"
+                                            alt=""
+                                            class="comment__icon"
+                                        />
+                                        <span class="comment__icon__content"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="single__comment__content">
+                                    <p>
+                                        Impressive! Though it seems the drag
+                                        feature could be improved. But overall
+                                        it looks incredible. You've nailed the
+                                        design and the responsiveness at various
+                                        breakpoints works really well.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="single__comment">
+                        <div class="single__comment__origin">
+                            <div class="single__comment__recommend">
+                                <div
+                                    class="single__comment__recommend__container"
+                                >
+                                    <button class="recommend__up"></button>
+                                    <span class="recommend__count">5</span>
+                                    <button class="recommend__down"></button>
+                                </div>
+                            </div>
+                            <div class="single__comment__container">
+                                <div class="single__comment__header">
+                                    <div class="single__comment__user__info">
+                                        <img
+                                            src="./images/avatars/image-maxblagun.webp"
+                                            alt="user maxblagun's photo"
+                                            class="comment__user__photo"
+                                        />
+                                        <span class="comment__user__name"
+                                            >maxblagun</span
+                                        >
+                                        <span class="comment__date"
+                                            >2 weeks ago</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="single__comment__icon"
+                                        name="reply"
+                                    >
+                                        <img
+                                            src="./images/icon-reply.svg"
+                                            alt=""
+                                            class="comment__icon"
+                                        />
+                                        <span class="comment__icon__content"
+                                            >Reply</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="single__comment__content">
+                                    <p>
+                                        Woah, your project looks awesome! How
+                                        long have you been coding for? I'm still
+                                        new, but think I want to dive into React
+                                        as well soon. Perhaps you can give me an
+                                        insight on where I can learn React?
+                                        Thanks!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single__comment__reply__user">
+                            <div class="single__comment__reply__line">
+                                <div class="reply__line"></div>
+                            </div>
+                            <ul class="single__comment__reply__list">
+                                <li class="single__comment">
+                                    <div class="single__comment__origin">
+                                        <div class="single__comment__recommend">
+                                            <div
+                                                class="single__comment__recommend__container"
+                                            >
+                                                <button
+                                                    class="recommend__up"
+                                                ></button>
+                                                <span class="recommend__count"
+                                                    >4</span
+                                                >
+                                                <button
+                                                    class="recommend__down"
+                                                ></button>
+                                            </div>
+                                        </div>
+                                        <div class="single__comment__container">
+                                            <div
+                                                class="single__comment__header"
+                                            >
+                                                <div
+                                                    class="single__comment__user__info"
+                                                >
+                                                    <img
+                                                        src="./images/avatars/image-ramsesmiron.webp"
+                                                        alt="user ramsesmiron's photo"
+                                                        class="comment__user__photo"
+                                                    />
+                                                    <span
+                                                        class="comment__user__name"
+                                                        >ramsesmiron</span
+                                                    >
+                                                    <span class="comment__date"
+                                                        >1 week ago</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="single__comment__icon"
+                                                    name="reply"
+                                                >
+                                                    <img
+                                                        src="./images/icon-reply.svg"
+                                                        alt=""
+                                                        class="comment__icon"
+                                                    />
+                                                    <span
+                                                        class="comment__icon__content"
+                                                        >Reply</span
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="single__comment__content"
+                                            >
+                                                <p>
+                                                    <span class="reply__to"
+                                                        >@maxblagun</span
+                                                    >If you're still new, I'd
+                                                    recommend focusing on the
+                                                    fundamentals of HTML, CSS,
+                                                    and JS before considering
+                                                    React. It's very tempting to
+                                                    jump ahead but lay a solid
+                                                    foundation first.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="single__comment">
+                                    <div class="single__comment__origin">
+                                        <div class="single__comment__recommend">
+                                            <div
+                                                class="single__comment__recommend__container"
+                                            >
+                                                <button
+                                                    class="recommend__up"
+                                                ></button>
+                                                <span class="recommend__count"
+                                                    >2</span
+                                                >
+                                                <button
+                                                    class="recommend__down"
+                                                ></button>
+                                            </div>
+                                        </div>
+                                        <div class="single__comment__container">
+                                            <div
+                                                class="single__comment__header"
+                                            >
+                                                <div
+                                                    class="single__comment__user__info"
+                                                >
+                                                    <img
+                                                        src="./images/avatars/image-juliusomo.webp"
+                                                        alt="user juliusomo's photo"
+                                                        class="comment__user__photo"
+                                                    />
+                                                    <span
+                                                        class="comment__user__name"
+                                                        >juliusomo</span
+                                                    >
+                                                    <span class="comment__date"
+                                                        >2 days ago</span
+                                                    >
+                                                </div>
+                                                <div
+                                                    class="single__comment__icons"
+                                                >
+                                                    <div
+                                                        class="single__comment__icon"
+                                                        name="delete"
+                                                    >
+                                                        <img
+                                                            src="./images/icon-delete.svg"
+                                                            alt=""
+                                                            class="comment__icon"
+                                                        />
+                                                        <span
+                                                            class="comment__icon__content"
+                                                            >Delete</span
+                                                        >
+                                                    </div>
+                                                    <div
+                                                        class="single__comment__icon"
+                                                        name="edit"
+                                                    >
+                                                        <img
+                                                            src="./images/icon-edit.svg"
+                                                            alt=""
+                                                            class="comment__icon"
+                                                        />
+                                                        <span
+                                                            class="comment__icon__content"
+                                                            >Edit</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="single__comment__content"
+                                            >
+                                                <p>
+                                                    <span class="reply__to"
+                                                        >@ramsesmiron</span
+                                                    >I couldn't agree more with
+                                                    this. Everything moves so
+                                                    fast and it always seems
+                                                    like everyone knows the
+                                                    newest library/framework.
+                                                    But the fundamentals are
+                                                    what stay constant.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="comment__write"></div>
+        </article>
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">hayeon</a>.
+            </div>
+        </footer>
+    </body>
 </html>
