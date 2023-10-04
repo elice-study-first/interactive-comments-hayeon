@@ -191,6 +191,7 @@ ul {
     width: 100%;
     min-width: 30px;
     height: 100%;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +263,8 @@ ul {
 .modal__container {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     top: 0px;
     left: 0px;
     z-index: 1;
